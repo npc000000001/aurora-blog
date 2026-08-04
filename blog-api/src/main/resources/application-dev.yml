@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aurora_blog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    database: 0
+    timeout: 10000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+# JWT 配置
+jwt:
+  # token 过期时间（毫秒），默认 3 天
+  expire-time: 259200000
+  # 密钥，生产环境务必修改
+  secret-key: aurora-blog-secret-key-please-change-in-production-2026
+
+# 文件上传配置
+upload:
+  # 存储方式：local 本地
+  channel: local
+  # 本地存储路径（Windows 用 / 结尾）
+  path: D:/workspace/aurora-blog/upload/
+  # 访问路径前缀
+  access-path: /upload/**
+
+# 博客信息
+blog:
+  name: Aurora Blog
+  # 前台地址
+  view-url: http://localhost:8081
+  # 后台地址
+  cms-url: http://localhost:8080

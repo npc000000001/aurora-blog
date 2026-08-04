@@ -1,0 +1,36 @@
+# Maven
+target/
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.iws
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# 环境配置（含密钥，不入库）
+blog-api/src/main/resources/application-prod.yml
+blog-api/src/main/resources/application-local.yml
+
+# 上传文件目录
+upload/
+
+# 前端
+node_modules/
+dist/
+.npm/
+.pnpm-store/
+
+# 本地参考目录（NBlog 仅作架构参考，绝不入库）
+NBlog/
+reference/

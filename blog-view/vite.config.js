@@ -25,6 +25,14 @@ export default defineConfig({
       '/tag': {
         target: 'http://localhost:8090',
         changeOrigin: true
+      },
+      '/friend': {
+        target: 'http://localhost:8090',
+        changeOrigin: true
+      },
+      '/comment': {
+        target: 'http://localhost:8090',
+        changeOrigin: true
       }
     }
   }

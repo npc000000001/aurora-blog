@@ -5,55 +5,55 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/Home.vue'),
+    component: () => import('@/views/home/Home.vue'),
     meta: { title: '首页' }
   },
   {
     path: '/blog/:id',
     name: 'BlogDetail',
-    component: () => import('@/views/BlogDetail.vue'),
+    component: () => import('@/views/blog/BlogDetail.vue'),
     meta: { title: '文章详情' }
   },
   {
     path: '/archives',
     name: 'Archives',
-    component: () => import('@/views/Archives.vue'),
+    component: () => import('@/views/archives/Archives.vue'),
     meta: { title: '归档' }
   },
   {
     path: '/categories',
     name: 'Categories',
-    component: () => import('@/views/Categories.vue'),
+    component: () => import('@/views/category/Categories.vue'),
     meta: { title: '分类' }
   },
   {
     path: '/category/:name',
     name: 'Category',
-    component: () => import('@/views/CategoryList.vue'),
+    component: () => import('@/views/category/CategoryList.vue'),
     meta: { title: '分类文章' }
   },
   {
     path: '/tags',
     name: 'Tags',
-    component: () => import('@/views/Tags.vue'),
+    component: () => import('@/views/tag/Tags.vue'),
     meta: { title: '标签' }
   },
   {
     path: '/tag/:name',
     name: 'Tag',
-    component: () => import('@/views/TagList.vue'),
+    component: () => import('@/views/tag/TagList.vue'),
     meta: { title: '标签文章' }
   },
   {
     path: '/friends',
     name: 'Friends',
-    component: () => import('@/views/Friends.vue'),
+    component: () => import('@/views/friend/Friends.vue'),
     meta: { title: '友链' }
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('@/views/About.vue'),
+    component: () => import('@/views/about/About.vue'),
     meta: { title: '关于' }
   }
 ]

@@ -67,7 +67,7 @@ public class SecurityConfig {
                 // 前台接口全部放行（公开访问）
                 .antMatchers(HttpMethod.GET,
                         "/", "/blog/**", "/category/**", "/tag/**",
-                        "/comment/**", "/about", "/archives", "/friends",
+                        "/comment/**", "/about", "/archives", "/friend/**",
                         "/index/**", "/moment/**"
                 ).permitAll()
                 // 后台接口需要登录

@@ -31,6 +31,6 @@ dist/
 .npm/
 .pnpm-store/
 
-# 本地参考目录（NBlog 仅作架构参考，绝不入库）
-NBlog/
-reference/
+# 本地无关目录（不入库）
+tmp/
+local/

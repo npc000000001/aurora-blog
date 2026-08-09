@@ -100,4 +100,11 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
                 .orderByDesc(Blog::getViews)
                 .last("LIMIT " + limit));
     }
+
+    @Override
+    public List<Blog> listRandom(int limit) {
+        return this.list(new LambdaQueryWrapper<Blog>()
+                .eq(Blog::getIsPublished, 1)
+                .last("ORDER BY RAND() LIMIT " + limit));
+    }
 }

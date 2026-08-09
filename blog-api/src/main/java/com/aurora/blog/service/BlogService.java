@@ -47,4 +47,12 @@ public interface BlogService extends IService<Blog> {
      * 获取推荐文章
      */
     java.util.List<Blog> listRecommend(int limit);
+
+    /**
+     * 随机获取已发布文章（用于侧边栏推荐）
+     *
+     * @param limit 返回条数
+     * @return 随机文章列表
+     */
+    java.util.List<Blog> listRandom(int limit);
 }

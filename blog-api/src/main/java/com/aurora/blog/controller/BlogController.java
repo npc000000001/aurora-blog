@@ -46,4 +46,11 @@ public class BlogController {
             @RequestParam(defaultValue = "5") Integer limit) {
         return Result.success(blogService.listRecommend(limit));
     }
+
+    @GetMapping("/random")
+    @ApiOperation("随机获取已发布文章")
+    public Result<List<Blog>> random(
+            @RequestParam(defaultValue = "5") Integer limit) {
+        return Result.success(blogService.listRandom(limit));
+    }
 }

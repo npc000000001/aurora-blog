@@ -16,3 +16,11 @@ export function getBlogDetail(id) {
     method: 'get'
   })
 }
+
+// 随机文章
+export function getRandomBlog() {
+  return request({
+    url: '/blog/random',
+    method: 'get'
+  })
+}

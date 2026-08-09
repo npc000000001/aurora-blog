@@ -1,6 +1,34 @@
 # Aurora Blog · 个人博客系统
 
-> 基于 Spring Boot + Vue3 前后端分离架构的现代化个人博客系统
+> 基于 Spring Boot + Vue3 开发的现代化极光主题个人博客系统，采用前后端分离架构。后端基于 Spring Security+JWT 实现无状态权限认证，使用 MyBatis‑Plus 完成数据库操作，Redis 用于缓存与登录黑名单；分为博客管理后台与博客展示前台，支持文章发布、分类标签管理、评论、访问统计、数据可视化等完整博客能力。100% 原创开发，所有业务代码、数据库设计、工具类、接口逻辑均独立从零编写。
+
+## 项目截图
+
+### 博客前台（blog-view）
+
+| 首页 | 归档 |
+| ---- | ---- |
+| ![前台首页](document/screenshots/view/home.png) | ![归档](document/screenshots/view/archives.png) |
+
+| 分类 | 关于 |
+| ---- | ---- |
+| ![分类](document/screenshots/view/categories.png) | ![关于](document/screenshots/view/about.png) |
+
+### 管理后台（blog-cms）
+
+| 登录页 | 仪表盘 |
+| ------ | ------ |
+| ![后台登录](document/screenshots/cms/login.png) | ![仪表盘](document/screenshots/cms/dashboard.png) |
+
+| 文章管理 | 写文章 |
+| -------- | ------ |
+| ![文章管理](document/screenshots/cms/blog-list.png) | ![写文章](document/screenshots/cms/write.png) |
+
+| 分类管理 | 标签管理 |
+| -------- | -------- |
+| ![分类管理](document/screenshots/cms/category.png) | ![标签管理](document/screenshots/cms/tag.png) |
+
+> ⚠️ 当前状态：评论回复模块待联调（P0 待完成）
 
 ## 技术栈
 
@@ -12,6 +40,14 @@
 | 后台前端 | Vue3 + Vite 6 + Element Plus + Pinia + Vue Router + ECharts |
 | 博客前台 | Vue3 + Vite 6 + Vue Router + Axios + marked（Markdown 渲染） |
 | 构建 | Maven 3.9 + npm |
+
+## 核心技术亮点
+
+- **无状态认证**：基于 Spring Security + JWT 实现无状态登录，借助 Redis 维护 Token 黑名单实现主动登出，BCrypt 完成密码加密存储
+- **统一异常处理**：全局统一异常处理器，封装统一返回体，区分业务状态码
+- **分页与统计**：MyBatis‑Plus 实现多表分页查询，完成文章浏览量统计
+- **前端状态管理**：Vue3 + Pinia 管理全局状态，Axios 请求拦截统一处理 token 携带与错误提示
+- **接口文档**：Knife4j 生成在线接口文档，方便前后端联调
 
 ## 项目结构
 
